@@ -11,7 +11,7 @@ export const Likes = (titulo) => {
     //console.log(titulo)
 
     function likef(){
-        if(likeactive){
+        if(likeactive){//si like esta activo cuando se presiona pasa a estado dislike
             setlikeactive(false)
             setlike("")
             LocalStorage(titulo,"-1")
