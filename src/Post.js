@@ -4,6 +4,8 @@ import EntryCard from './Components/EntryCard';
 import Select from 'react-select'
 import {useState,useEffect} from 'react';
 
+import Ranking from './Components/Ranking/ranking';
+
 const CLIENT_ID="b01669ce06464e06ad1afe9c395c7c15";
 const CLIENT_SECRET="c7e50afc03dc417ca2181cf3d81664ff";
 
@@ -69,6 +71,12 @@ export default function Post({songs, setSongs, Iconimage, hour_text, weather}){
         console.log(songArray[0].external_urls.spotify)
     }
     
+    const actualizarRank = () =>{
+        const songs = Ranking();
+        songs.map((item)=>
+            console.log(item.likes)
+        )
+    }
 
 
     return (
@@ -109,6 +117,26 @@ export default function Post({songs, setSongs, Iconimage, hour_text, weather}){
 
                         <button type='button' onClick={saveHandler}>Crenvyar</button>
 
+                        <div>.</div>
+                        <div>.</div>
+                        <button type='button' onClick={actualizarRank}>Ranking</button>
+                        <div className='ranking'>
+                            <h4>Tablero de Likes</h4>
+                            <table border={"1"}>
+                                <tr>
+                                    <td>Cancion</td>
+                                    <td>❤</td>
+                                </tr>
+                            {
+                                songs.map((item)=>
+                                <tr>
+                                    <td>{item.nombre}</td>
+                                    <td>{item.likes}</td>
+                                </tr>
+                                )
+                            }
+                            </table>
+                        </div>
                     </div>
 
                     <div className='entries-wrapper'>

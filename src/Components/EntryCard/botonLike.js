@@ -20,7 +20,6 @@ export const Likes = (titulo) => {
             setlikeactive(true)
             setlike("d❤")
             LocalStorage(titulo,"+1")
-            Ranking()
         }
     }
 

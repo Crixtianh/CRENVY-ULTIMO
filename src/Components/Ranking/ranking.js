@@ -1,14 +1,14 @@
-import { useEffect, useState } from 'react';
-import listaRanking from './listaRanking';
+import { useEffect, useState, React } from 'react';
+import SongRanking from './songRanking'; 
 
 export default function Ranking() {
     //const [songs, setSongs] = useState([]);
 
-    let songs=[];
+    const songs=[];
     for(var i=0, len=localStorage.length; i<len; i++) {
         var key = localStorage.key(i);
         var value = (localStorage.getItem(key));
-        console.log(key + " => " + value);
+        //console.log(key + " => " + value);
         songs.push({
             nombre: key,
             likes: value,
@@ -28,7 +28,37 @@ export default function Ranking() {
         }
     }
     
-    console.log(songs);
+    //console.log(songs);
 
+    //const ranking = new SongRanking(songs)
+    //ranking.render()
+
+    songs.map((item)=>{
+        //console.log(item.nombre)
+    })
+
+    return(
+        songs
+    )
     
 }
+
+/*return(
+        <div>
+            <h1>Tablero de Likes</h1>
+            <table border={"1"}>
+                <tr>
+                    <td>Cancion</td>
+                    <td>❤</td>
+                </tr>
+            {
+                songs.map((item)=>
+                <tr>
+                    <td>{item.nombre}</td>
+                    <td>{item.likes}</td>
+                </tr>
+                )
+            }
+            </table>
+        </div>
+    )*/
