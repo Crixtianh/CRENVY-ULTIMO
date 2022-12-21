@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import LocalStorage from "../LocalStorage/localStorage";
+import Ranking from "../Ranking/ranking";
 
 
 export const Likes = (titulo) => {
@@ -19,6 +20,7 @@ export const Likes = (titulo) => {
             setlikeactive(true)
             setlike("d❤")
             LocalStorage(titulo,"+1")
+            Ranking()
         }
     }
 

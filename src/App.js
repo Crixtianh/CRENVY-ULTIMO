@@ -10,6 +10,8 @@ import { Container,InputGroup,FormControl,Button,Row,Card} from 'react-bootstrap
 import React from "react";
 import axios from "axios";
 
+import Ranking from './Components/Ranking/ranking';
+
 
 const CLIENT_ID="b01669ce06464e06ad1afe9c395c7c15";
 const CLIENT_SECRET="c7e50afc03dc417ca2181cf3d81664ff";
@@ -103,8 +105,9 @@ function App() {
               country={country} place={place} temp={temp} 
               weather={weather} dateText={dateText} hour_text={hour_text} />
             <Post songs = {songs} setSongs = {setSongs} Iconimage={Iconimage} hour_text={hour_text} weather={weather}/>
+            
           </header>
-          
+
         )
     }
     </div>
