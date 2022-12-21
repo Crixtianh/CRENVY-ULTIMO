@@ -72,7 +72,10 @@ export default function Post({songs, setSongs, Iconimage, hour_text, weather}){
         console.log(songArray[0].external_urls.spotify)
     }
     
-    const vacio=[{nombre:" dsada", likes:"1"}]
+    
+    const changeAnimo = event =>{
+        console.log(event)
+    }
 
     const [canciones,setCanciones] = useState([])
 
@@ -121,6 +124,12 @@ export default function Post({songs, setSongs, Iconimage, hour_text, weather}){
 
                         <div>.</div>
                         <div>.</div>
+                        <select name='estado' onChange={changeAnimo}>
+                                    <option></option>
+                                    <option>😁</option>
+                                    <option>😢</option>
+                                    <option>😐</option>
+                                </select>
                         <button type='button' onClick={actualizarRank}>Ranking</button>
                         <div className='ranking'>
                             <h4>Tablero de Likes</h4>
