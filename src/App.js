@@ -12,6 +12,9 @@ import axios from "axios";
 
 import Ranking from './Components/Ranking/ranking';
 
+import 'react-tabulator/lib/styles.css';
+import { ReactTabulator } from 'react-tabulator'
+
 
 const CLIENT_ID="b01669ce06464e06ad1afe9c395c7c15";
 const CLIENT_SECRET="c7e50afc03dc417ca2181cf3d81664ff";

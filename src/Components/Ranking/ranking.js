@@ -10,6 +10,7 @@ export default function Ranking() {
         var value = (localStorage.getItem(key));
         //console.log(key + " => " + value);
         songs.push({
+            id: i,
             nombre: key,
             likes: value,
         });
@@ -33,9 +34,9 @@ export default function Ranking() {
     //const ranking = new SongRanking(songs)
     //ranking.render()
 
-    songs.map((item)=>{
+    /*songs.map((item)=>{
         //console.log(item.nombre)
-    })
+    })*/
 
     return(
         songs
